@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background:#000; display:flex; align-items:center; justify-content:center; height:100vh;">
+
+<form method="post" style="background:#111; padding:40px; border-radius:20px;">
+    {% csrf_token %}
+
+    <h2 style="color:#fff;">ADMIN LOGIN</h2>
+
+    <input type="email" name="email" placeholder="Email"><br><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
+
+    <button>Login</button>
+
+</form>
+
+</body>
+</html>

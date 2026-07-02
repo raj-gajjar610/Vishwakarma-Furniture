@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add Product</h2>
+
+<form method="post">
+{% csrf_token %}
+
+<input type="text" name="name" placeholder="Name"><br><br>
+<input type="text" name="price" placeholder="Price"><br><br>
+<textarea name="detail"></textarea><br><br>
+
+<button>Add</button>
+
+</form>
+
+</body>
+</html>

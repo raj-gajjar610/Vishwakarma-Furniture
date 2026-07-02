@@ -1,0 +1,149 @@
+/* ================= NAVBAR ================= */
+.custom-navbar{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:320px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0 25px;
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(10px);
+
+    border-radius:40px;
+    border:1px solid rgba(255,255,255,0.3);
+
+    transition:all 0.4s ease;
+
+    z-index:9999;
+}
+
+/* EXPAND ON HOVER */
+.custom-navbar:hover{
+    width:80%;
+    max-width:900px;
+    height:55px;
+}
+
+/* ================= BRAND ================= */
+.navbar-brand{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+
+    color:#c6a96b;
+    font-size:14px;
+    letter-spacing:5px;
+    white-space:nowrap;
+
+    transition:0.3s;
+}
+
+/* HIDE BRAND ON HOVER */
+.custom-navbar:hover .navbar-brand{
+    opacity:0;
+}
+
+/* ================= MENU ITEMS ================= */
+.menu-items{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+
+    width:100%;
+
+    opacity:0;
+    transform:translateY(5px);
+    transition:0.3s;
+
+    pointer-events:none;
+}
+
+/* SHOW ON HOVER */
+.custom-navbar:hover .menu-items{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+/* LINKS */
+.menu-items a{
+    text-decoration:none;
+    color:#111;
+    font-size:13px;
+    letter-spacing:2px;
+    white-space:nowrap;
+}
+
+.menu-items a:hover{
+    color:#c6a96b;
+}
+
+/* NAVBAR MESSAGE */
+.navbar-message{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-150%, -50%); /* start from left */
+
+    padding:8px 20px;
+    border-radius:25px;
+
+    /* MATCH BRAND STYLE */
+    color:#c6a96b;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(8px);
+
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:500;
+
+    white-space:nowrap;
+
+    opacity:0;
+    z-index:2000;
+
+    pointer-events:none;
+    transition:0.5s ease;
+}
+
+/* SHOW (center) */
+.navbar-message.show{
+    opacity:1;
+    transform:translate(-50%, -50%);
+}
+
+/* EXIT (slide left) */
+.navbar-message.hide{
+    opacity:0;
+    transform:translate(-150%, -50%);
+}
+
+/* BRAND */
+.navbar-brand{
+    transition:0.4s ease;
+}
+
+.navbar-brand.hide{
+    opacity:0;
+}
+/* SHOW */
+.navbar-message.show{
+    opacity:1;
+}
+
+/* HIDE BRAND SMOOTH */
+.navbar-brand{
+    transition:0.3s ease;
+}
+
+.navbar-brand.hide{
+    opacity:0;
+}
